@@ -1,0 +1,28 @@
+{
+  "name": "queuingsystem",
+  "version": "1.0.0",
+  "author": "Oleg Vasilyev",
+  "license": "ISC",
+  "scripts": {
+    "dev-js": "gulp dev-js",
+    "dev-css": "gulp dev-css",
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-coffee": "2.3.3",
+    "gulp-ignore": "2.0.2",
+    "gulp-less": "^3.3.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "4.3.11",
+    "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "rxjs": "5.0.0-rc.4",
+    "jquery": "3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "//github.com/oleg-vasilyev/MultiphaseQueuingSystem.git"
+  }
+}
