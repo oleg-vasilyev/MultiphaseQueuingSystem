@@ -212,10 +212,10 @@ sourceDistributionFunctionFactory = new SourceDistributionFunctionFactory()
 channelDistributionFunctionFactory = new ChannelDistributionFunctionFactory()
 
 isDebugMode = false
-sourceIntensity = 1
-firstPhaseChannelIntensity = 0.05
-secondPhaseChannelIntensity = 0.03
-tasksCount = 300
+sourceIntensity = 0.05 #0.05 -- 0.5
+firstPhaseChannelIntensity = 0.01
+secondPhaseChannelIntensity = 0.02
+tasksCount = 100
 
 source = new Source(tasksCount + 1, sourceDistributionFunctionFactory.getFunction(sourceIntensity))
 
@@ -232,6 +232,7 @@ for id in [0..7]
 	secondPhaseChannels.push(new Channel("Channel 2nd phase | №" + id, channelDistributionFunctionFactory.getFunction(secondPhaseChannelIntensity)))
 
 queuingSystem = new QueuingSystem(source, hoarderFirstPhase, hoarderSecondPhase, firstPhaseChannels, secondPhaseChannels, isDebugMode)
+
 queuingSystem.onFinished.subscribe (outputTasks) ->
 	averageTimeExpectationsInHFP = 0
 	maxTimeExpectationsInHFP = 0
